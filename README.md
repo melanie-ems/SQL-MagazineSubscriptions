@@ -59,32 +59,34 @@ Links customers to magazines and tracks subscription details.
 
 ## Files in This Repository
 
-- **schema.sql**: Database schema definition with table creation statements
+- **schema.sql**: Database schema definition with table creation statements (MySQL/MariaDB)
+- **schema_sqlite.sql**: SQLite-compatible version of the database schema
 - **sample_data.sql**: Sample data for testing and demonstration
 - **sample_queries.sql**: Example queries for common operations
+- **ERD.md**: Entity Relationship Diagram showing table relationships
+- **SETUP.md**: Detailed setup instructions for different database systems
+- **README.md**: This file - overview and quick start guide
 
-## Setup Instructions
+## Quick Start
 
-1. Create a new database:
-   ```sql
-   CREATE DATABASE MagazineSubscriptions;
-   USE MagazineSubscriptions;
-   ```
+### MySQL/MariaDB
+```bash
+mysql -u root -p
+```
+```sql
+CREATE DATABASE MagazineSubscriptions;
+USE MagazineSubscriptions;
+SOURCE schema.sql;
+SOURCE sample_data.sql;  -- Optional
+```
 
-2. Run the schema script to create tables:
-   ```sql
-   SOURCE schema.sql;
-   ```
+### SQLite
+```bash
+sqlite3 magazine_subscriptions.db < schema_sqlite.sql
+sqlite3 magazine_subscriptions.db < sample_data.sql  # Optional
+```
 
-3. (Optional) Load sample data:
-   ```sql
-   SOURCE sample_data.sql;
-   ```
-
-4. Try the sample queries:
-   ```sql
-   SOURCE sample_queries.sql;
-   ```
+For detailed setup instructions for different database systems, see **[SETUP.md](SETUP.md)**.
 
 ## Usage Examples
 
