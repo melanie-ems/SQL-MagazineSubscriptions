@@ -1,0 +1,19 @@
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# MySQL
+*.cnf
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
